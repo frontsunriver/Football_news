@@ -7,7 +7,7 @@ class Database_store extends My_Controller {
     }
     
     public function team_store(){
-        $uri = 'http://api.football-data.org/v2/competitions/CL/teams';
+        $uri = 'http://api.football-data.org/v2/competitions/WC/teams';
         $reqPrefs['http']['method'] = 'GET';
         $reqPrefs['http']['header'] = 'X-Auth-Token: c840296ff94b4d9ab25de9abe1070c27';
         $stream_context = stream_context_create($reqPrefs);
@@ -28,7 +28,7 @@ class Database_store extends My_Controller {
 
     public function competition_match(){
         // $uri = 'http://api.football-data.org/v2/competitions/BL1/matches?season=2021';
-        $uri = 'http://api.football-data.org/v2/competitions/CL/matches?season=2021';
+        $uri = 'http://api.football-data.org/v2/competitions/WC/matches?season=2022';
         $reqPrefs['http']['method'] = 'GET';
         $reqPrefs['http']['header'] = 'X-Auth-Token: c840296ff94b4d9ab25de9abe1070c27';
         $stream_context = stream_context_create($reqPrefs);
